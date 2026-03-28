@@ -1,0 +1,17 @@
+<resources>
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="header_bar">#333333</color>
+    <color name="page_bg">#F2F2F2</color>
+    <color name="lcd_green">#C8D9C0</color>
+    <color name="lcd_border">#8A9A82</color>
+    <color name="lcd_text">#1A1A1A</color>
+    <color name="lcd_label">#3D4A38</color>
+
+    <color name="key_white">#FFFFFF</color>
+    <color name="key_dark">#4A4A4A</color>
+    <color name="key_dark_text">#FFFFFF</color>
+</resources>

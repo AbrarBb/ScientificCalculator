@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/header_bar"
+        android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
+        app:navigationIcon="@drawable/ic_menu"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/screen_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/lcd_border"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lcd_green"
+                android:minHeight="@dimen/lcd_min_height"
+                android:orientation="vertical"
+                android:padding="@dimen/lcd_padding">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvAngleLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/deg"
+                        android:textColor="@color/lcd_label"
+                        android:textSize="@dimen/lcd_label_text"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvFmtLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fmt_norm"
+                        android:textColor="@color/lcd_label"
+                        android:textSize="@dimen/lcd_label_text"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvExpression"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:gravity="end|center_vertical"
+                    android:maxLines="3"
+                    android:text="@string/hint_display"
+                    android:textColor="@color/lcd_text"
+                    android:textSize="@dimen/lcd_main_text" />
+
+                <TextView
+                    android:id="@+id/tvResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:gravity="end"
+                    android:minHeight="22dp"
+                    android:textColor="@color/lcd_text"
+                    android:textSize="@dimen/lcd_result_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingStart="@dimen/screen_padding"
+        android:paddingEnd="@dimen/screen_padding"
+        android:paddingBottom="@dimen/screen_padding"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/KeyRowGridWeighted">
+
+                <Button
+                    android:id="@+id/btnShift"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="SHIFT"
+                    android:textSize="10sp" />
+
+                <Button
+                    android:id="@+id/btnDrg"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="DRG" />
+
+                <Button
+                    android:id="@+id/btnFse"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="FSE" />
+
+                <Button
+                    android:id="@+id/btnMR"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="MR" />
+
+                <Button
+                    android:id="@+id/btnMS"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="MS" />
+
+                <Button
+                    android:id="@+id/btnMplus"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="M+" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/KeyRowGridWeighted">
+
+                <Button
+                    android:id="@+id/btnHyp"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="hyp" />
+
+                <Button
+                    android:id="@+id/btnSin"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="sin" />
+
+                <Button
+                    android:id="@+id/btnCos"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="cos" />
+
+                <Button
+                    android:id="@+id/btnTan"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="tan" />
+
+                <Button
+                    android:id="@+id/btnLn"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="ln" />
+
+                <Button
+                    android:id="@+id/btnLog"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="log" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/KeyRowGridWeighted">
+
+                <Button
+                    android:id="@+id/btnXrootY"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="x√y" />
+
+                <Button
+                    android:id="@+id/btnSqrt"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="√" />
+
+                <Button
+                    android:id="@+id/btnSquare"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="x²" />
+
+                <Button
+                    android:id="@+id/btnPercent"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="%" />
+
+                <Button
+                    android:id="@+id/btnOpen"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text="(" />
+
+                <Button
+                    android:id="@+id/btnClose"
+                    style="@style/KeyWhite"
+                    android:layout_weight="5"
+                    android:text=")" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/KeyRowGridWeighted">
+
+                <Button
+                    android:id="@+id/btn7"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="7" />
+
+                <Button
+                    android:id="@+id/btn8"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="8" />
+
+                <Button
+                    android:id="@+id/btn9"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="9" />
+
+                <Button
+                    android:id="@+id/btnOnAc"
+                    style="@style/KeyDarkLarge"
+                    android:layout_weight="6"
+                    android:text="ON/AC" />
+
+                <Button
+                    android:id="@+id/btnDel"
+                    style="@style/KeyDarkLarge"
+                    android:layout_weight="6"
+                    android:text="DEL" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/KeyRowGridWeighted">
+
+                <Button
+                    android:id="@+id/btn4"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="4" />
+
+                <Button
+                    android:id="@+id/btn5"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="5" />
+
+                <Button
+                    android:id="@+id/btn6"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="6" />
+
+                <Button
+                    android:id="@+id/btnMul"
+                    style="@style/KeyDarkLarge"
+                    android:layout_weight="6"
+                    android:text="×" />
+
+                <Button
+                    android:id="@+id/btnDiv"
+                    style="@style/KeyDarkLarge"
+                    android:layout_weight="6"
+                    android:text="÷" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/KeyRowGridWeighted">
+
+                <Button
+                    android:id="@+id/btn1"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="1" />
+
+                <Button
+                    android:id="@+id/btn2"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="2" />
+
+                <Button
+                    android:id="@+id/btn3"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="3" />
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    style="@style/KeyDarkLarge"
+                    android:layout_weight="6"
+                    android:text="+" />
+
+                <Button
+                    android:id="@+id/btnSub"
+                    style="@style/KeyDarkLarge"
+                    android:layout_weight="6"
+                    android:text="-" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/KeyRowGridWeighted">
+
+                <Button
+                    android:id="@+id/btn0"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="0" />
+
+                <Button
+                    android:id="@+id/btnPlusMinus"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="+/-" />
+
+                <Button
+                    android:id="@+id/btnDot"
+                    style="@style/KeyWhiteLarge"
+                    android:layout_weight="6"
+                    android:text="." />
+
+                <Button
+                    android:id="@+id/btnExp"
+                    style="@style/KeyDarkLarge"
+                    android:layout_weight="6"
+                    android:text="EXP" />
+
+                <Button
+                    android:id="@+id/btnEquals"
+                    style="@style/KeyDarkLarge"
+                    android:layout_weight="6"
+                    android:text="=" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

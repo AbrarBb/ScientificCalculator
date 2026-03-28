@@ -1,0 +1,14 @@
+<resources>
+    <dimen name="screen_padding">6dp</dimen>
+    <dimen name="lcd_padding">10dp</dimen>
+    <dimen name="lcd_min_height">100dp</dimen>
+    <dimen name="lcd_label_text">11sp</dimen>
+    <dimen name="lcd_main_text">28sp</dimen>
+    <dimen name="lcd_result_text">16sp</dimen>
+    <dimen name="key_min_height">44dp</dimen>
+    <dimen name="key_margin">3dp</dimen>
+    <dimen name="key_text_sci">11sp</dimen>
+    <dimen name="key_text_num">17sp</dimen>
+    <dimen name="key_corner">4dp</dimen>
+    <dimen name="key_elevation">2dp</dimen>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Scientific Calculator</string>
+    <string name="hint_display">0</string>
+    <string name="history_title">Calculation history</string>
+    <string name="history_empty">No calculations yet.</string>
+    <string name="clear_history">Clear history</string>
+    <string name="close">Close</string>
+    <string name="error">Error</string>
+    <string name="deg">DEG</string>
+    <string name="rad">RAD</string>
+    <string name="grad">GRAD</string>
+    <string name="fmt_norm">NORM</string>
+    <string name="fmt_fix">FIX</string>
+    <string name="fmt_sci">SCI</string>
+    <string name="fmt_eng">ENG</string>
+    <string name="exp_hint">Put digits first, then EXP</string>
+</resources>
