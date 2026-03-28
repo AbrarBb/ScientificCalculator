@@ -1,9 +1,5 @@
 package com.example.scientificcalculator;
 
-/**
- * Evaluates expressions with + - * / ^, scientific notation (E), root(x,y), and trig.
- * Angle mode affects sin/cos/tan input and asin/acos/atan output.
- */
 public class MathEvaluator {
 
     public enum AngleMode {
